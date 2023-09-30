@@ -84,4 +84,15 @@ const getDogsByName = async (name) => {
 	return dogs;
 };
 
-module.exports = { getDogs, getDogsById, getDogsByName };
+const createDog = async (name, height, weight, life_span, image) => {
+	const newDog = await Dog.create({
+		name,
+		height,
+		weight,
+		life_span,
+		image,
+	});
+	return newDog;
+};
+
+module.exports = { getDogs, getDogsById, getDogsByName, createDog };

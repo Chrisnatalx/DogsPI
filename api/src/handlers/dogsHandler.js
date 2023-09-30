@@ -2,6 +2,7 @@ const {
 	getDogs,
 	getDogsById,
 	getDogsByName,
+	createDog,
 } = require('../controllers/getDogs');
 
 const getDogsHandler = async (req, res) => {
@@ -39,20 +40,14 @@ const getDogsByIdHandler = async (req, res) => {
 		res.status(500).json({ message: error.message });
 	}
 };
-// const getDogsByNameHandler = async () => {
-// 	const { name } = req.query;
-// 	const nameTolowerCase = name.toLowerCase();
-// 	try {
-// 		const dogs = await getDogsByName(nameTolowerCase);
+const createDogHandler = async (req, res) => {
+	try {
+		const { name, height, weight, life_span, image } = req.body;
+		const response = await createDog(name, height, weight, life_span, image);
+		res.status(200).json(response);
+	} catch (error) {
+		res.status(500).json({ error: error.message });
+	}
+};
 
-// 		dogs
-// 			? res.status(200).json(dogs)
-// 			: res
-// 					.status(404)
-// 					.json({ message: `No se encontro ningun perro con esa raza` });
-// 	} catch (error) {
-// 		res.status(500).json({ message: error.message });
-// 	}
-// };
-
-module.exports = { getDogsHandler, getDogsByIdHandler };
+module.exports = { getDogsHandler, getDogsByIdHandler, createDogHandler };
