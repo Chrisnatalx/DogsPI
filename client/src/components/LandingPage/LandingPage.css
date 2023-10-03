@@ -1,0 +1,19 @@
+.Container-landing{
+    height: 76.5vh;
+    color: #FFFFFF;
+    font-family: 'Poppins'
+}
+.Container-landing p {
+    font-size: 20px;
+}
+.Container-landing button {
+    height: 30px;
+    width: 120px;
+    border-radius: 7px;
+    border: white;
+    font-family: 'Poppins'
+}
+.Container-landing button:hover{
+    transform: scale(1.05,1.05);
+    background-color: #bdbdbd;
+}

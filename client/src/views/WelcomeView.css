@@ -1,0 +1,12 @@
+body{
+    margin: 0px;
+}
+.container-wel{
+    padding-top:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:no-repeat url("https://www.xtrafondos.com/descargar.php?id=2527&resolucion=1920x1080");
+    height: 100%;
+}
+
