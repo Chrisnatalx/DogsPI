@@ -1,0 +1,42 @@
+
+.Container-Nav{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+}
+
+.Container-Nav-Items{
+    margin-right: 40px;
+}
+.Container-Nav-Items button{
+    margin-right: 60px;
+    height: 30px;
+    border-radius: 7px;
+    border: white;
+    color: white;
+    font-family: 'Poppins';
+    background-color: #000;
+    font-size: 14px;
+
+    
+}
+.Container-Nav-Items input{
+    width: 300px;
+    height: 25px;
+    color: white;
+    font-family: 'Poppins';
+    border-radius: 8px ;
+
+  
+}
+.Container-Nav-Items button:hover{
+    transform: scale(1.1,1.1);
+    text-decoration: underline 1px solid;
+    background-color: #000;
+}

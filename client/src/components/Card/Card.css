@@ -1,0 +1,23 @@
+.Container-Card{
+    border-radius: 7px;
+    border:1px solid #000;
+    width: 270px;
+    height: 450px;
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    
+    margin:5px;
+    align-items: center;
+
+}
+.Container-Card button{
+    border-radius: 7px;
+    height: 30px;
+    font-family: 'Poppins';
+    margin-top: 5px;
+    border: #fff;
+}
+.Container-Card button:hover{
+    background-color: #bebebe;
+}

@@ -1,0 +1,10 @@
+.ContainerCards{
+    
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    width: 100%;
+    gap: 10px;
+    background-color: rgb(255, 248, 232);
+}

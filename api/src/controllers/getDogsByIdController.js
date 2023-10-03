@@ -13,7 +13,7 @@ const getDogsByIdController = async (id, source) => {
 			image: `https://cdn2.thedogapi.com/images/${data.reference_image_id}.jpg`,
 			temperament: data.temperament,
 			weight: data.weight.metric,
-			heigth: data.heigth,
+			height: data.height.metric,
 			origin: data.origin,
 			life_span: data.life_span,
 		};
