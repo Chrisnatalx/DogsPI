@@ -1,0 +1,19 @@
+.Detail{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    font-family: 'Poppins';
+}
+
+.Detail button{
+    border-radius: 7px;
+    height: 30px;
+    width: 50px;
+    font-family: 'Poppins';
+    margin-top: 5px;
+    border: #fff;
+}
+.Detail button:hover{
+    background-color: #bebebe;
+}

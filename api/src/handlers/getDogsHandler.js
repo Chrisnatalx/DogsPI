@@ -2,10 +2,10 @@ const getDogsByNameController = require('../controllers/getDogsByNameController'
 const getDogsController = require('../controllers/getDogsController');
 
 const getDogsHandler = async (req, res) => {
-	const { name } = req.query;
+	const { name, page } = req.query;
 	try {
 		if (!name) {
-			const dogs = await getDogsController(); // hacemos el llamado al controlador, debe esperar a la respuesta
+			const dogs = await getDogsController(page); // hacemos el llamado al controlador, debe esperar a la respuesta
 			res.status(200).json(dogs); //response formato json
 		} else {
 			const nameTolowerCase = name.toLowerCase();

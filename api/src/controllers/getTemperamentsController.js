@@ -1,16 +1,25 @@
 require('dotenv').config();
-
-const getTemperamentsController = async (dogs) => {
-	console.log(dogs);
+const axios = require('axios');
+const { API_KEY } = process.env;
+const { Temperaments } = require('../db');
+const getTemperamentsController = async () => {
+	const { data } = await axios.get(
+		`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`
+	);
 	const temperaments = new Set();
-	dogs.forEach((dog) => {
-		const temperamentsBreed = dog.temperament || '';
+	data.forEach((dog) => {
+		const temperamentsBreed = dog.temperament;
 		if (temperamentsBreed) {
-			temperamentsBreed.split(', ').forEach((temperamento) => {
-				temperaments.add(temperamento.trim());
+			temperamentsBreed.split(', ').forEach(async (temperamento) => {
+				const temperamentTrim = temperamento.trim();
+				temperaments.add(temperamentTrim);
+				await Temperaments.findOrCreate({
+					where: { name: temperamentTrim },
+				});
 			});
 		}
 	});
+
 	return Array.from(temperaments);
 };
 module.exports = getTemperamentsController;

@@ -3,8 +3,8 @@ const axios = require('axios');
 const { API_KEY } = process.env;
 
 //controler que se comunica con la api para obtener datos de las razas.
-const getDogsController = async () => {
-	const url = `https://api.thedogapi.com/v1/breeds?limit=8&page=2&api_key=${API_KEY}`;
+const getDogsController = async (page) => {
+	const url = `https://api.thedogapi.com/v1/breeds?limit=8&page=${page}&api_key=${API_KEY}`;
 	const { data } = await axios.get(url); //solicitud a la api
 	const breed = data.map((dog) => {
 		// mapeamos la data para que obtener lo que necesitamos.

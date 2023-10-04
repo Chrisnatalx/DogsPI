@@ -3,9 +3,7 @@ const getTemperamentsController = require('../controllers/getTemperamentsControl
 
 const getTemperamentsHandler = async (req, res) => {
 	try {
-		const dogs = await getDogsController();
-		console.log(dogs);
-		const response = await getTemperamentsController(dogs);
+		const response = await getTemperamentsController();
 		res.status(200).json(response);
 	} catch (error) {
 		res.status.json({ error: error.message });
