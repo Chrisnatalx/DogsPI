@@ -1,0 +1,19 @@
+.Pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-family: 'Poppins';
+}
+
+.Pagination button {
+    height: 30px;
+    width: 120px;
+    border-radius: 7px;
+    border: white;
+    font-family: 'Poppins'
+}
+.Pagination button:hover{
+    transform: scale(1.05,1.05);
+    background-color: #bdbdbd;
+}

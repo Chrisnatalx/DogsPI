@@ -12,8 +12,8 @@ export const Card = ({ dog }) => {
         <div className='Container-Card'>
 
             <h2>{dog.name}</h2>
-            <h5>Temperaments: {dog.temperament}</h5>
-            <h5>Weight: {dog.weight}</h5>
+            <h5> Temperaments: {dog.temperament}</h5>
+            <h5>Weight: {dog.weight} Kg.</h5>
             <img src={dog.image} alt={dog.name} style={{ width: '200px', height: '150px' }} />
             <button onClick={navigateHandler}>More details</button>
 
