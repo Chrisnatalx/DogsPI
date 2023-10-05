@@ -18,7 +18,7 @@ export const Detail = () => {
     return (
         <div className='Detail'>
             <div className='Container-info'>
-                <h2>Id: 1</h2>
+                <h2>Id: {dog.id}</h2>
                 <h2>Breed: {dog.name}</h2>
                 <h5>Temperaments: {dog.temperament}</h5>
                 <h5>Weight: {dog.weight}</h5>

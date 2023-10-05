@@ -1,8 +1,8 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { WelcomeView } from './views/WelcomeView';
-import { Home } from './components/Home/Home';
-import { Navbar } from './components/Navbar/Navbar';
 import { Detail } from './components/Detail/Detail';
+import { Navbar } from './components/navbar/Navbar';
+import { Home } from './components/home/Home';
 
 
 

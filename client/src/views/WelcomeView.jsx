@@ -1,6 +1,7 @@
 import React from 'react'
-import { LandingPage } from '../components/LandingPage/LandingPage'
+
 import './WelcomeView.css'
+import { LandingPage } from '../components/ladingpage/LandingPage'
 export const WelcomeView = () => {
     return (
         <div className='container-wel'>

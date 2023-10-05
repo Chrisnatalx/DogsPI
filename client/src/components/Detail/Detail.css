@@ -4,6 +4,7 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     font-family: 'Poppins';
+    width: 100%;
 }
 
 .Detail button{

@@ -7,10 +7,15 @@ const getDogsByIdController = async (id, source) => {
 		const { data } = await axios.get(
 			`https://api.thedogapi.com/v1/breeds/${id}?api_key=${API_KEY}`
 		);
+
+		const imageReference = await axios.get(
+			`https://api.thedogapi.com/v1/images/${data.reference_image_id}`
+		);
+		const image = imageReference.data;
 		const dog = {
 			id: data.id,
 			name: data.name,
-			image: `https://cdn2.thedogapi.com/images/${data.reference_image_id}.jpg`,
+			image: image.url,
 			temperament: data.temperament,
 			weight: data.weight.metric,
 			height: data.height.metric,

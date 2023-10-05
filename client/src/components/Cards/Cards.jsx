@@ -1,6 +1,7 @@
 import React from 'react'
-import { Card } from '../Card/Card'
+
 import './Cards.css'
+import { Card } from '../card/Card'
 export const Cards = ({ dogs }) => {
 
 
