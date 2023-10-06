@@ -5,6 +5,7 @@ const createDogController = async (
 	height,
 	weight,
 	life_span,
+	temperament,
 	image,
 	dog_temperaments
 ) => {
@@ -13,20 +14,16 @@ const createDogController = async (
 		height,
 		weight,
 		life_span,
+		temperament,
 		image,
 	});
+	await newDog.save();
 	const temperaments = await Temperaments.findAll({
 		where: { name: dog_temperaments },
 	});
 
 	await newDog.addTemperaments(temperaments);
 
-	//dog_temperaments.forEach(async(t)=>{
-	// const  TemperamentsDB = await Temperaments.findAll({
-	// 	where: {temperamente: t}
-	// })
-	// await newTemperament.add
-	// })
 	return newDog;
 };
 module.exports = createDogController;

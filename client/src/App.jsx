@@ -3,6 +3,7 @@ import { WelcomeView } from './views/WelcomeView';
 import { Detail } from './components/Detail/Detail';
 import { Navbar } from './components/navbar/Navbar';
 import { Home } from './components/home/Home';
+import { Form } from './components/form/Form';
 
 
 
@@ -20,6 +21,8 @@ function App() {
 				<Route path='/' element={<WelcomeView />}></Route>
 				<Route path='/home' element={<Home />} ></Route>
 				<Route path='/detail/:id' element={<Detail />} ></Route>
+				<Route path='/form' element={<Form />} ></Route>
+
 			</Routes>
 		</>
 	);

@@ -2,13 +2,21 @@ const createDogController = require('../controllers/createDogController');
 
 const createDogHandler = async (req, res) => {
 	try {
-		const { name, height, weight, life_span, image, dog_temperaments } =
-			req.body;
+		const {
+			name,
+			height,
+			weight,
+			life_span,
+			temperament,
+			image,
+			dog_temperaments,
+		} = req.body;
 		const response = await createDogController(
 			name,
 			height,
 			weight,
 			life_span,
+			temperament,
 			image,
 			dog_temperaments
 		);
