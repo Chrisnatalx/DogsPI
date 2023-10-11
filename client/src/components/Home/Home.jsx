@@ -56,31 +56,32 @@ export const Home = () => {
             <div className='input' >
                 <input type="text" placeholder='Bulldog...' onChange={handlerChange} value={name} />
             </div>
-            <br />
-            <br />
-            <br />
-            <select placeholder="Sort" onChange={sortHandler}>
-                {["Ascendente", "Descendente"].map((order) => (
-                    <option key={order} value={order}>
-                        {order}
-                    </option>
-                ))}
-            </select>
-            <select placeholder="Sort" onChange={sortByWeight}>
-                {["LowerWeight", "maxWeight"].map((order) => (
-                    <option key={order} value={order}>
-                        {order}
-                    </option>
-                ))}
-            </select>
+            <div className='container-select'>
+                <select onChange={sortHandler}>
+                    {["Ascendent", "Descendent"].map((order) => (
+                        <option key={order} value={order}>
+                            {order}
+                        </option>
+                    ))}
+                </select>
+                <select onChange={sortByWeight}>
+                    {["LowerWeight", "GreaterWeight"].map((order) => (
+                        <option key={order} value={order}>
+                            {order}
+                        </option>
+                    ))}
+                </select>
 
-            <select placeholder='Filter' onChange={filterChange}>
-                {temperament.map((temp) => (
-                    <option key={temp} value={temp} >{temp}</option>
-                ))}
+                <select placeholder='Filter' onChange={filterChange}>
+                    {temperament.map((temp) => (
+                        <option key={temp} value={temp} >{temp}</option>
+                    ))}
 
-            </select>
-            <button onClick={resetFilter}>Reset</button>
+                </select>
+                <button onClick={resetFilter}>Reset</button>
+
+            </div>
+
 
             <Cards allDogs={allDogs} />
             <Pagination page={page} setPage={setPage} />

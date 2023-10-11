@@ -19,7 +19,7 @@ export default function rootReducer(state = initialState, action) {
 			};
 		case ORDER:
 			let orderAllDogs = [...state.allDogs];
-			if (action.payload === 'Ascendente') {
+			if (action.payload === 'Ascendent') {
 				sorted = orderAllDogs.sort((a, b) => a.name.localeCompare(b.name));
 			} else {
 				sorted = orderAllDogs.sort((a, b) => b.name.localeCompare(a.name));

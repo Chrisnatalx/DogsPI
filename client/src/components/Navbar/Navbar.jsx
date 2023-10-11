@@ -11,6 +11,7 @@ export const Navbar = () => {
                     <NavLink to='/home'><button>Home</button></NavLink>
                     <NavLink to='/form'><button>CreateDog</button></NavLink>
                     <NavLink to='/delete'><button>DeleteDog</button></NavLink>
+                    <NavLink to='/update'><button>UpdateDog</button></NavLink>
 
                 </div>
 

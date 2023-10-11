@@ -3,8 +3,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+    justify-content: center;
     font-family: 'Poppins';
-    width: 100%;
+    width: 80%;
+    background-color:rgb(252, 239, 210)
 }
 
 .Detail button{

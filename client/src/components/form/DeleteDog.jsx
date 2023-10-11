@@ -26,7 +26,7 @@ export const DeleteDog = () => {
         <div>
             <form action="" onSubmit={deleteDog} className='Form'>
                 <input type="text" value={id} onChange={handlerChange} />
-                <button type='submit'>Delete</button>
+                <button type='submit'>Delete Dog</button>
             </form>
 
         </div>

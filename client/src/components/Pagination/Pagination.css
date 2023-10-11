@@ -4,6 +4,10 @@
     align-items: center;
     gap: 30px;
     font-family: 'Poppins';
+    background-color: rgb(15, 25, 35);
+}
+.Pagination p{
+    color: white;
 }
 
 .Pagination button {

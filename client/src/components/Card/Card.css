@@ -1,15 +1,14 @@
 .Container-Card{
-    border-radius: 7px;
-    border:1px solid #000;
+    box-shadow: rgba(84, 84, 104, 0.986) 0px 48px 100px 0px;
     width: 300px;
     height: 450px;
     font-family: 'Poppins';
     display: flex;
     flex-direction: column;
-    
     margin:5px;
     align-items: center;
     text-align: center;
+    background-color:rgb(252, 239, 210)
 
 }
 .Container-Card button{
@@ -18,6 +17,7 @@
     font-family: 'Poppins';
     margin-top: 10px;
     border: #fff;
+   
 }
 .Container-Card button:hover{
     background-color: #bebebe;
@@ -25,4 +25,6 @@
 .Container-Card h5{
     margin-left: '12px';
     margin-right: '12px';
+    margin-top:'10px';
+    margin-bottom:'10px';
 }
