@@ -4,6 +4,7 @@ import { Detail } from './components/Detail/Detail';
 import { Navbar } from './components/navbar/Navbar';
 import { Home } from './components/home/Home';
 import { Form } from './components/form/Form';
+import { DeleteDog } from './components/form/DeleteDog';
 
 
 
@@ -22,6 +23,7 @@ function App() {
 				<Route path='/home' element={<Home />} ></Route>
 				<Route path='/detail/:id' element={<Detail />} ></Route>
 				<Route path='/form' element={<Form />} ></Route>
+				<Route path='/delete' element={<DeleteDog />} ></Route>
 
 			</Routes>
 		</>

@@ -4,8 +4,10 @@ const createDogHandler = async (req, res) => {
 	try {
 		const {
 			name,
-			height,
-			weight,
+			minHeight,
+			maxHeight,
+			minWeight,
+			maxWeight,
 			life_span,
 			temperament,
 			image,
@@ -13,8 +15,10 @@ const createDogHandler = async (req, res) => {
 		} = req.body;
 		const response = await createDogController(
 			name,
-			height,
-			weight,
+			minHeight,
+			maxHeight,
+			minWeight,
+			maxWeight,
 			life_span,
 			temperament,
 			image,

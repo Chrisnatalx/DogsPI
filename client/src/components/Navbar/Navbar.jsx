@@ -10,6 +10,8 @@ export const Navbar = () => {
                 <div className='Container-Nav-Items'>
                     <NavLink to='/home'><button>Home</button></NavLink>
                     <NavLink to='/form'><button>CreateDog</button></NavLink>
+                    <NavLink to='/delete'><button>DeleteDog</button></NavLink>
+
                 </div>
 
             </div>

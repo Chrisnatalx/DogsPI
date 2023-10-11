@@ -2,12 +2,12 @@ import React from 'react'
 
 import './Cards.css'
 import { Card } from '../card/Card'
-export const Cards = ({ dogs }) => {
+export const Cards = ({ allDogs }) => {
 
 
     return (
         <div className='ContainerCards'>
-            {dogs.map(dog => (
+            {allDogs.map(dog => (
                 <Card key={dog.id} dog={dog} />
             )
 

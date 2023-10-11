@@ -2,8 +2,10 @@ require('dotenv').config();
 const { Dog, Temperaments } = require('../db');
 const createDogController = async (
 	name,
-	height,
-	weight,
+	minHeight,
+	maxHeight,
+	minWeight,
+	maxWeight,
 	life_span,
 	temperament,
 	image,
@@ -11,8 +13,8 @@ const createDogController = async (
 ) => {
 	const newDog = await Dog.create({
 		name,
-		height,
-		weight,
+		height: `${minHeight} - ${maxHeight}`,
+		weight: `${minWeight} - ${maxWeight}`,
 		life_span,
 		temperament,
 		image,
