@@ -16,7 +16,7 @@ export const Home = () => {
     const dispatch = useDispatch();
     const allDogs = useSelector(state => state.allDogs);
 
-    function sortHandler(e) {
+    const sortHandler = (e) => {
         dispatch(orderDogsByName(e.target.value));
     }
 

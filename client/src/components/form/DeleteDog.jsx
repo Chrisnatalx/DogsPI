@@ -21,12 +21,20 @@ export const DeleteDog = () => {
 
     }
 
-
+    const disabled = () => {
+        let disabled
+        if (id === '') {
+            disabled = true;
+        } else {
+            disabled = false
+        }
+        return disabled
+    }
     return (
         <div>
             <form action="" onSubmit={deleteDog} className='Form'>
-                <input type="text" value={id} onChange={handlerChange} />
-                <button type='submit'>Delete Dog</button>
+                <input type="text" value={id} onChange={handlerChange} placeholder='Insert UUID for delete dog' />
+                <button type='submit' disabled={disabled()}>Delete Dog</button>
             </form>
 
         </div>

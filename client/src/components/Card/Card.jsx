@@ -5,7 +5,7 @@ export const Card = ({ dog }) => {
 
     const navigate = useNavigate()
 
-    function navigateHandler() {
+    const navigateHandler = () => {
         navigate(`/detail/${dog.id}`);
     }
     return (

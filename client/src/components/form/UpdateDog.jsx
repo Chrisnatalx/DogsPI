@@ -62,11 +62,11 @@ export const UpdateDog = () => {
 
             };
             await axios.put('http://localhost:3001/dogs', Dogupdated);
-            console.log('Perro actualizado exitosamente.');
+            alert('Perro actualizado exitosamente')
         } catch (error) {
             console.error('Error al actualizar el perro:', error);
         }
-        alert('Perro actualizado exitosamente')
+
     }
 
     return (

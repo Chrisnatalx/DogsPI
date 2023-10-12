@@ -1,4 +1,3 @@
-const getDogsController = require('../controllers/getDogsController');
 const getTemperamentsController = require('../controllers/getTemperamentsController');
 
 const getTemperamentsHandler = async (req, res) => {
@@ -6,7 +5,7 @@ const getTemperamentsHandler = async (req, res) => {
 		const response = await getTemperamentsController();
 		res.status(200).json(response);
 	} catch (error) {
-		res.status.json({ error: error.message });
+		res.status(500).json({ error: error.message });
 	}
 };
 module.exports = getTemperamentsHandler;

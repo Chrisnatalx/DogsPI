@@ -59,11 +59,21 @@ export const Form = () => {
 
             };
             await axios.post('http://localhost:3001/dogs', newDog);
-            console.log('Perro creado exitosamente.');
         } catch (error) {
             console.error('Error al crear el perro:', error);
         }
         alert('Perro creado exitosamente')
+        setInputValue({
+            name: '',
+            minHeight: '',
+            maxHeight: '',
+            minWeight: '',
+            maxWeight: '',
+            life_span: '',
+            temperament: '',
+            image: '',
+            dog_temperaments: ''
+        })
     }
     return (
         <div >
